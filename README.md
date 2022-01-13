@@ -6,6 +6,9 @@ District   : IUT Informatique.
 ## Theme
 A knockoff Tetris JavaFX app.
 
+## Needs
+JFX SDK and JetBrains annotations kit.
+
 ## Team
 [![](https://github.com/antoinedenovembre.png?size=50)](https://github.com/antoinedenovembre)
  and 
