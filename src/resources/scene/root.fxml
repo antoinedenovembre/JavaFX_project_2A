@@ -19,6 +19,7 @@
            <Button fx:id="startButton" prefHeight="100" prefWidth="200" text="Start" textFill="cornflowerblue" BorderPane.alignment="CENTER" />
            <Text text="Score : " fx:id="scoreText"/>
            <Text text="Lines : " fx:id="lineText"/>
+           <Text text="Meilleur score : " fx:id="bestScoreText"/>
        </FlowPane>
    </center>
 </BorderPane>

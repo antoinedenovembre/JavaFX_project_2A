@@ -3,6 +3,9 @@ package fr.defretiereduteyrat.tetris.controller;
 import fr.defretiereduteyrat.tetris.game.GameState;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * The type Concrete mover.
+ */
 public class ConcreteMover extends Mover {
 
 	public void fall(@NotNull GameState gameState) {

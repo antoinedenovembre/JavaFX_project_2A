@@ -4,8 +4,16 @@ import fr.defretiereduteyrat.tetris.bricks.*;
 
 import java.util.Random;
 
+/**
+ * The type Brick utils.
+ */
 public class BrickUtils {
 
+	/**
+	 * Gets random brick.
+	 *
+	 * @return the random brick
+	 */
 	public static Brick getRandomBrick() {
 		int random = new Random().nextInt(7);
 		return switch (random) {
