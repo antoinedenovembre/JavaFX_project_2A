@@ -5,9 +5,11 @@ import fr.defretiereduteyrat.tetris.controller.Collider;
 import fr.defretiereduteyrat.tetris.utils.BackupManager;
 import fr.defretiereduteyrat.tetris.utils.BrickUtils;
 import javafx.scene.layout.GridPane;
-import javafx.scene.paint.Color;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
 
-import java.util.Random;
+import java.io.File;
 
 /**
  * The type Game state.
@@ -60,6 +62,11 @@ public class GameState {
     private int bestScore;
 
     /**
+     * The Media Player
+     */
+    private final MediaPlayer mediaPlayer;
+
+    /**
      * The isRunning variable.
      */
     private boolean running;
@@ -73,6 +80,12 @@ public class GameState {
     public GameState(GridPane gameGridPane) throws Exception {
         this.gameGridPane = gameGridPane;
         bestScore = BackupManager.readSaveFile();
+        mediaPlayer = new MediaPlayer(new Media(new File("resources/music/soundtrack.wav").toURI().toString()));
+        mediaPlayer.setOnEndOfMedia(() -> {
+            mediaPlayer.seek(Duration.ZERO);
+            mediaPlayer.play();
+        });
+        mediaPlayer.setVolume(mediaPlayer.getVolume());
         reset();
     }
 
@@ -135,6 +148,20 @@ public class GameState {
     public void displayGameOver() {
         grid = new Grid();
         grid.displayGameOver();
+    }
+
+    /**
+     * Starts the soundtrack
+     */
+    public void startSoundtrack() {
+        mediaPlayer.play();
+    }
+
+    /**
+     * Stops the soundtrack
+     */
+    public void stopSoundtrack() {
+        mediaPlayer.stop();
     }
 
     /**

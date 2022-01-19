@@ -10,7 +10,7 @@ public class BackupManager {
     /**
      * The constant save path.
      */
-    public static final String SAVE_PATH = "src/bin/save.bin";
+    public static final String SAVE_PATH = "./bin/save.bin";
 
     /**
      * Read save file int.

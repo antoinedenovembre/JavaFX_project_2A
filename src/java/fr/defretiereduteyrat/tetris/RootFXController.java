@@ -259,6 +259,7 @@ public class RootFXController  {
         gameState.reset();
         gameState.setRunning(true);
         startButton.setText("Stop");
+        gameState.startSoundtrack();
 
         updateThreadLoop = new Thread(new UpdateLoop(gameState, mover));
         renderLoop = new AnimationTimerExt(17) {
@@ -283,6 +284,8 @@ public class RootFXController  {
      * Stops the game.
      */
     private void stopGame() {
+        gameState.stopSoundtrack();
+
         if(gameState.getBestScore() < gameState.getScore()){
             gameState.setBestScore(gameState.getScore());
             try {

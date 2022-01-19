@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Play Pretend;
+    src: url("../fonts/PlayPretend.otf");
+}
+
+.root {
+    -fx-font-size: 16pt;
+    -fx-font-family: "Play Pretend";
+    -fx-base: rgb(40,40,40);
+}
+
+.game-stack {
+    -fx-base: rgb(40,40,40);
+}
+
+.game-grid-cell {
+    -fx-background-color: black, white;
+    -fx-background-insets: 0, 0 1 1 0;
+}
+
+.game-grid {
+    -fx-padding: 5;
+}
+
+.bouton-start {
+    -fx-padding: 15px;
+    -fx-border-insets: 15px;
+    -fx-background-insets: 15px;
+}
+
+.bouton-start:hover {
+    -fx-background-color: #383838;
+}
+
+.bouton-start:pressed {
+    -fx-background-color: #282828;
+}
+
+.sidebar {
+    -fx-padding: 15px;
+    -fx-border-insets: 15px;
+    -fx-background-insets: 15px;
+}
+
+.text {
+    -fx-padding: 15px;
+}
+
+.upcomingBrickGrid {
+    -fx-padding: 50px;
+    -fx-border-insets: 15px;
+    -fx-background-insets: 15px;
+}
